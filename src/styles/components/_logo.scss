@@ -1,0 +1,13 @@
+div.logo-wrapper {
+  div {
+    width: 36px;
+    height: 36px;
+    background: $colour-indigo;
+  }
+  h1 {
+    font-family: $title-font;
+    padding-left: 9px;
+    font-size: 27px;
+    font-weight: 700;
+  }
+}

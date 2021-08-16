@@ -1,0 +1,40 @@
+div.hero-wrapper {
+  padding-top: 167px;
+  text-align: center;
+  background: linear-gradient(
+    196.54deg,
+    transparentize(#8ca5fd, 0.6) 22.27%,
+    transparentize(#d6e0fa, 0.6) 55.28%,
+    rgba(255, 255, 255, 0) 90.64%
+  );
+  h2 {
+    background: linear-gradient(to right, #4b05a4, #ff9c64);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 120px;
+  }
+  p {
+    font-size: 32px;
+    line-height: 48px;
+    margin-top: -9px;
+
+    color: rgba(88, 83, 109, 0.9);
+  }
+  a {
+    margin-top: 58px;
+    padding: 20px 52px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  img {
+    width: 422px;
+    height: 390px;
+    margin-top: 36px;
+    margin-bottom: 14px;
+  }
+}
