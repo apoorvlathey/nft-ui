@@ -1,0 +1,37 @@
+div.start-wrapper {
+  text-align: center;
+  margin-bottom: 166px;
+  h2 {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: bold;
+  }
+  p {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+    margin-top: 8px;
+    color: $colour-gray;
+    max-width: 540px;
+    strong {
+      font-weight: bold;
+      color: $colour-black;
+    }
+  }
+  a {
+    margin-top: 40px;
+    padding: 20px;
+    width: 240px;
+    border-radius: 20px;
+    background: linear-gradient(97.39deg, rgba(255, 208, 188, 0.2) -21.89%, rgba(150, 58, 207, 0.2) 134.13%);
+    color: #ad5bcc;
+    font-size: 16px;
+  }
+  img {
+    width: 359px;
+    height: 359px;
+    margin-top: 40px;
+    transform: translateX(-10px);
+  }
+}
