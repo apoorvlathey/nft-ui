@@ -1,0 +1,59 @@
+div.features-wrapper {
+  padding-left: 160px;
+  margin-bottom: 266px;
+  position: relative;
+  width: 100vw;
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    list-style: 60px;
+  }
+  p {
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 36px;
+    color: $colour-gray;
+    margin-bottom: 88px;
+  }
+  img.ninja {
+    width: 521px;
+    height: 526px;
+    position: absolute;
+    right: 0px;
+    top: 200px;
+  }
+  div.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 49px 32px;
+    div.feature-wrapper {
+      div.icon-wrapper {
+        width: 96px;
+        height: 96px;
+        border-radius: 16px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 64px;
+          height: 64px;
+          object-fit: contain;
+        }
+      }
+      h3 {
+        margin-top: 32px;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 600;
+      }
+      p {
+        margin: 0;
+        margin-top: 6px;
+        font-size: 16px;
+        line-height: 27px;
+      }
+    }
+  }
+}

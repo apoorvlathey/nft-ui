@@ -1,4 +1,4 @@
-import { Cards, Footer, Header, Hero, Logos, Start } from '../components';
+import { Cards, Features, Footer, Header, Hero, Logos, Start } from '../components';
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
         <Hero />
         <Logos />
         <Cards />
+        <Features />
         <Start />
         <Footer />
       </div>
