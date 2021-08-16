@@ -1,0 +1,121 @@
+div.cards-wrapper {
+  width: calc(100vw - 320px);
+  margin: auto;
+  margin-bottom: 200px;
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 80px;
+  }
+  div.title {
+    margin-bottom: 24px;
+    div.user {
+      img {
+        width: 56px;
+        height: 56px;
+        border-radius: 500px;
+        margin-right: 12px;
+        object-fit: cover;
+      }
+      span {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    span.value {
+      border: 2.6px solid $colour-green;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 0 16px;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 44px;
+      color: $colour-green;
+    }
+    span.price {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: $colour-gray;
+      margin-left: 16px;
+      display: block;
+    }
+  }
+  div.body {
+    background: #eff8ff;
+    padding: 32px;
+    border-radius: 20px;
+    width: calc(100vw - 320px);
+    div.list {
+      gap: 24px;
+
+      div.card-wrapper {
+        border-radius: 24px;
+        box-shadow: 0px 32px 62px rgba(88, 81, 103, 0.12), 0px 13px 24px rgba(88, 81, 103, 0.04);
+        padding: 24px;
+        & > img {
+          height: 240px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 16px;
+        }
+        h3 {
+          margin-top: 16px;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 30px;
+        }
+        div.user {
+          margin-top: 16px;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 500px;
+            object-fit: cover;
+          }
+          span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            margin-left: 13px;
+          }
+        }
+        div.footer {
+          margin-top: 16px;
+          img {
+            border-radius: 500px;
+          }
+          span {
+            padding-left: 16px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+        div.currency {
+          margin-top: 12px;
+          span.value {
+            color: $colour-green;
+            padding: 6px;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 12px;
+            text-transform: uppercase;
+
+            border: 2px solid $colour-green;
+            // box-sizing: border-box;
+            border-radius: 4px;
+          }
+          span.price {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: $colour-gray;
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
