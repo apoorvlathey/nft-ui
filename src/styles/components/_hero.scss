@@ -1,12 +1,26 @@
 div.hero-wrapper {
   padding-top: 167px;
   text-align: center;
-  background: linear-gradient(
-    196.54deg,
-    transparentize(#8ca5fd, 0.6) 22.27%,
-    transparentize(#d6e0fa, 0.6) 55.28%,
-    rgba(255, 255, 255, 0) 90.64%
-  );
+  // background: linear-gradient(
+  //   196.54deg,
+  //   transparentize(#8ca5fd, 0.6) 22.27%,
+  //   transparentize(#d6e0fa, 0.6) 55.28%,
+  //   rgba(255, 255, 255, 0) 75.64%
+  // );
+
+  position: relative;
+  background-position: bottom;
+  padding-bottom: 96px;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100% + 120px);
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+  }
   h2 {
     background: linear-gradient(to right, #4b05a4, #ff9c64);
     -webkit-background-clip: text;
@@ -20,7 +34,7 @@ div.hero-wrapper {
     line-height: 48px;
     margin-top: -9px;
 
-    color: rgba(88, 83, 109, 0.9);
+    color: $colour-gray;
   }
   a {
     margin-top: 58px;
@@ -35,6 +49,5 @@ div.hero-wrapper {
     width: 422px;
     height: 390px;
     margin-top: 36px;
-    margin-bottom: 14px;
   }
 }

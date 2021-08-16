@@ -1,0 +1,44 @@
+footer.footer-wrapper {
+  margin: 0 135px;
+  div.content {
+    padding-bottom: 69.5px;
+    div.col {
+      span {
+        font-size: 24px;
+        margin-bottom: 28px;
+        font-weight: 500;
+      }
+      a {
+        font-size: 18px;
+        line-height: 40px;
+        color: transparentize(#58536d, 0.1);
+      }
+    }
+    div.flex-2 {
+      flex: 2;
+
+      h2 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 48px;
+        line-height: 24px;
+      }
+      span {
+        line-height: auto;
+        font-size: 16px;
+        margin: 0;
+        color: $colour-gray;
+      }
+    }
+  }
+  div.bottom {
+    padding: 22.5px 0;
+    margin-bottom: 22.5px;
+    text-align: center;
+    border-top: 1px solid rgba(105, 120, 131, 0.16);
+    span {
+      font-size: 16px;
+      color: $colour-gray;
+    }
+  }
+}
