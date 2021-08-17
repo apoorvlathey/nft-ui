@@ -1,0 +1,117 @@
+div.profiles-wrapper {
+  margin-bottom: 247px;
+  @media screen and (max-width: $screen-tablet) {
+    margin-bottom: 180px;
+  }
+  @media screen and (max-width: $screen-mobile) {
+    margin-bottom: 148px;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    margin-left: 160px;
+    margin-bottom: 56px;
+    position: relative;
+    z-index: 4;
+    @media screen and (max-width: $screen-tablet) {
+      margin-left: 72px;
+      font-size: 32px;
+      line-height: 48px;
+    }
+    @media screen and (max-width: $screen-mobile) {
+      margin-left: 32px;
+      font-size: 30px;
+      line-height: 120%;
+    }
+  }
+  div.content {
+    position: relative;
+    &::after,
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: -100px;
+      bottom: -100px;
+      background: linear-gradient(to right, $colour-bg, transparent);
+      width: 120px;
+      z-index: 3;
+      pointer-events: none;
+      @media screen and (max-width: $screen-tablet) {
+        width: 80px;
+      }
+      @media screen and (max-width: $screen-mobile) {
+        width: 48px;
+      }
+    }
+    &::after {
+      background: linear-gradient(to left, $colour-bg, transparent);
+      right: 0;
+    }
+    div.line {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      animation: scroll 180s linear infinite;
+      width: fit-content;
+      &:first-of-type {
+        margin-bottom: 32px;
+      }
+      &:last-of-type {
+        margin-left: -180px;
+      }
+      &:hover {
+        animation-play-state: paused;
+      }
+      div.profile-wrapper {
+        background: linear-gradient(83.59deg, #fcfcfd 36.52%, rgba(252, 252, 253, 0.83) 98.8%);
+
+        box-shadow: 0px 40px 64px 0px rgba(15, 15, 15, 0.1);
+        backdrop-filter: blur(32px);
+
+        border-radius: 80px;
+        padding: 16px;
+        padding-right: 24px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 48px auto;
+        grid-gap: 16px;
+        img {
+          width: 48px;
+          height: 48px;
+          border-radius: 500px;
+          object-fit: cover;
+          flex-shrink: 0;
+        }
+        div.body {
+          span {
+            display: block;
+            white-space: nowrap;
+            &.name {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+            }
+            &.meta {
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 20px;
+              color: $colour-gray;
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 24px));
+  }
+}
