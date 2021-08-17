@@ -1,3 +1,4 @@
+@tailwind base;
 @tailwind utilities;
 
 @import 'variables';
@@ -7,6 +8,18 @@ body,
 html {
   color: $colour-black;
   font-family: $title-font;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    content: '';
+    background: #fbf8f6;
+    z-index: -12;
+  }
   * {
     box-sizing: border-box;
   }

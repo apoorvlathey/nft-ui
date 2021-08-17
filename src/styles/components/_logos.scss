@@ -1,5 +1,24 @@
 div.logos-wrapper {
   margin-bottom: 208px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 0;
+    top: 92px;
+    width: 440px;
+    height: 995px;
+    display: block;
+    background: url('../../images/oval-1.svg');
+    background-size: contain;
+    // background-position: right;
+    content: '';
+    z-index: 0;
+  }
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
   h2 {
     font-size: 40px;
     line-height: 60px;

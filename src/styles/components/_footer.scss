@@ -1,5 +1,19 @@
 footer.footer-wrapper {
   margin: 0 135px;
+  position: relative;
+
+  &::after {
+    width: 790px;
+    height: 651px;
+    position: absolute;
+    left: -135px;
+    bottom: 0;
+    display: block;
+    content: '';
+    background: url('../../images/oval-4.svg');
+    z-index: -2;
+    background-size: cover;
+  }
   div.content {
     padding-bottom: 69.5px;
     div.col {

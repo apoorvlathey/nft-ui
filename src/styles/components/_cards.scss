@@ -2,6 +2,19 @@ div.cards-wrapper {
   width: calc(100vw - 320px);
   margin: auto;
   margin-bottom: 200px;
+  position: relative;
+  z-index: 2;
+  &::after {
+    width: 504px;
+    height: 865px;
+    position: absolute;
+    display: block;
+    content: '';
+    left: -160px;
+    top: 379px;
+    background: url('../../images/oval-2.svg');
+    z-index: -2;
+  }
   h2 {
     font-size: 40px;
     font-weight: bold;
