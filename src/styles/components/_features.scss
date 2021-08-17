@@ -27,20 +27,24 @@ div.features-wrapper {
       margin-top: 16px;
       font-size: 16px;
       line-height: 24px;
+      margin-bottom: 24px;
     }
   }
   img.ninja {
     width: 521px;
     height: 526px;
     position: absolute;
-    right: 0px;
+    right: -100px;
     top: 200px;
     @media screen and (max-width: $screen-mobile) {
-      // position: relative;
-      display: none;
-      max-width: 100vw;
-      max-height: 100vw;
+      position: relative;
+      // display: none;
+      top: 0;
+      left: 0;
+      max-width: calc(100vw - 64px);
+      max-height: calc(100vw - 64px);
       object-fit: contain;
+      margin-bottom: 40px;
     }
   }
   div.feature-list {

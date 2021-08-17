@@ -1,9 +1,9 @@
 const Features = () => {
   return (
     <div className='features-wrapper'>
-      <img src='/images/ninja.png' alt='Ninja' className='ninja' />
       <h2>One link. All your NFTs.</h2>
       <p>Your belter of a collection needs a proper showroom.</p>
+      <img src='/images/ninja-full.png' alt='Ninja' className='ninja' />
       <div className='feature-list'>
         <Feature
           icon='profile'
