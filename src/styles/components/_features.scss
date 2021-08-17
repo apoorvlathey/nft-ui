@@ -1,9 +1,10 @@
 div.features-wrapper {
-  padding-left: 160px;
+  padding-left: 72px;
   margin-bottom: 266px;
   position: relative;
   width: 100vw;
-  z-index: 2;
+  z-index: 3;
+  overflow: hidden;
   @media screen and (max-width: $screen-mobile) {
     padding: 0 32px;
     margin-bottom: 148px;
@@ -15,6 +16,10 @@ div.features-wrapper {
     @media screen and (max-width: $screen-mobile) {
       font-size: 30px;
       line-height: 120%;
+    }
+    @media screen and (max-width: $screen-tablet) {
+      font-size: 32px;
+      line-height: 48px;
     }
   }
   p {
@@ -29,13 +34,26 @@ div.features-wrapper {
       line-height: 24px;
       margin-bottom: 24px;
     }
+    @media screen and (max-width: $screen-tablet) {
+      max-width: 380px;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: left;
+      max-width: 380px;
+    }
   }
   img.ninja {
     width: 521px;
     height: 526px;
     position: absolute;
-    right: -100px;
+    left: max(900px, calc(100vw - 440px));
     top: 200px;
+    @media screen and (max-width: $screen-tablet) {
+      top: 0;
+      left: max(512px, calc(100vw - 260px));
+      width: 316px;
+      height: 321px;
+    }
     @media screen and (max-width: $screen-mobile) {
       position: relative;
       // display: none;
@@ -52,6 +70,10 @@ div.features-wrapper {
     grid-template-columns: repeat(2, 350px);
     grid-template-rows: 1fr 1fr;
     grid-gap: 49px 32px;
+    @media screen and (max-width: $screen-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      width: calc(100vw - 144px);
+    }
     @media screen and (max-width: $screen-mobile) {
       grid-template-rows: repeat(4, 1fr);
       grid-template-columns: repeat(1, 1fr);
@@ -77,9 +99,14 @@ div.features-wrapper {
         font-size: 24px;
         line-height: 36px;
         font-weight: 600;
+
         @media screen and (max-width: $screen-mobile) {
           font-size: 24px;
           line-height: 36px;
+        }
+        @media screen and (max-width: $screen-tablet) {
+          font-size: 20px;
+          line-height: 30px;
         }
       }
       p {
@@ -87,6 +114,10 @@ div.features-wrapper {
         margin-top: 6px;
         font-size: 16px;
         line-height: 27px;
+        @media screen and (max-width: $screen-tablet) {
+          font-size: 16px;
+          line-height: 24px;
+        }
         @media screen and (max-width: $screen-mobile) {
           font-size: 18px;
           line-height: 27px;

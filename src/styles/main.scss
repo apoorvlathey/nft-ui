@@ -10,6 +10,7 @@ html {
   font-family: $title-font;
   position: relative;
   user-select: none;
+  overflow-x: hidden;
   &::after {
     position: absolute;
     top: 0;

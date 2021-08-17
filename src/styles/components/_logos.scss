@@ -22,9 +22,13 @@ div.logos-wrapper {
 
     @media screen and (max-width: $screen-mobile) {
       max-width: 50vw;
+      top: 32px;
+    }
+    @media screen and (max-width: $screen-tablet) {
       background-position-x: right;
       background-position-y: top;
-      top: 32px;
+      height: 691px;
+      top: 294px;
     }
   }
   & > * {
@@ -35,6 +39,10 @@ div.logos-wrapper {
     font-size: 40px;
     line-height: 60px;
     font-weight: bold;
+    @media screen and (max-width: $screen-tablet) {
+      font-size: 32px;
+      line-height: 48px;
+    }
     @media screen and (max-width: $screen-mobile) {
       font-size: 30px;
       line-height: 120%;
@@ -52,13 +60,21 @@ div.logos-wrapper {
       margin-top: 16px;
       text-align: left;
     }
+    @media screen and (max-width: $screen-tablet) {
+      margin-top: 16px;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
   & > div {
     margin-top: 71px;
-    @media screen and (max-width: $screen-mobile) {
+    @media screen and (max-width: $screen-tablet) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      margin-top: 64px;
+    }
+    @media screen and (max-width: $screen-mobile) {
       margin: 0 -8px;
       margin-top: 40px;
     }

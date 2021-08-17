@@ -24,6 +24,13 @@ footer.footer-wrapper {
   }
   div.content {
     padding-bottom: 69.5px;
+    @media screen and (max-width: $screen-tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: 'a a a' 'b c d';
+      grid-gap: 48px 64px;
+    }
     @media screen and (max-width: $screen-mobile) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -55,7 +62,7 @@ footer.footer-wrapper {
 
     div.flex-2 {
       flex: 2;
-      @media screen and (max-width: $screen-mobile) {
+      @media screen and (max-width: $screen-tablet) {
         grid-area: a;
       }
       h2 {
