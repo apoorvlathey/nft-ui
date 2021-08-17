@@ -34,7 +34,7 @@ div.profiles-wrapper {
       content: '';
       top: -100px;
       bottom: -100px;
-      background: linear-gradient(to right, $colour-bg, transparent);
+      background: linear-gradient(to right, $colour-bg, transparentize(#fbf8f6, 1));
       width: 120px;
       z-index: 3;
       pointer-events: none;
@@ -46,7 +46,7 @@ div.profiles-wrapper {
       }
     }
     &::after {
-      background: linear-gradient(to left, $colour-bg, transparent);
+      background: linear-gradient(to left, $colour-bg, transparentize(#fbf8f6, 1));
       right: 0;
     }
     div.line {
