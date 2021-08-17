@@ -5,7 +5,7 @@ import logo4 from './LOGO_4.svg';
 import logo5 from './LOGO_5.svg';
 import logo6 from './LOGO_6.svg';
 
-const logos = [logo1, logo2, logo4, logo5, logo6];
+const logos = [logo1, logo4, logo2, logo4, logo5, logo6];
 
 const Logos = () => {
   return (
@@ -14,7 +14,7 @@ const Logos = () => {
       <p>We support all your favorite blockchains and projects.</p>
       <div className='flex items-center justify-center'>
         {logos.map((logo, i) => (
-          <Logo logo={logo} key={`logo-${i}`} soon={i > 2} />
+          <Logo logo={logo} key={`logo-${i}`} soon={i > 3} />
         ))}
       </div>
 
@@ -31,7 +31,7 @@ const Logo = ({ logo, soon }) => {
           <span>Coming soon</span>
         </span>
       )}
-      <img src={logo} alt='' />
+      <img draggble={false} src={logo} alt='' />
     </div>
   );
 };

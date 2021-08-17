@@ -9,6 +9,7 @@ html {
   color: $colour-black;
   font-family: $title-font;
   position: relative;
+  user-select: none;
   &::after {
     position: absolute;
     top: 0;

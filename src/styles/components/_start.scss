@@ -2,8 +2,9 @@ div.start-wrapper {
   text-align: center;
   margin-bottom: 166px;
   position: relative;
-  overflow: hidden;
-
+  @media screen and (max-width: $screen-mobile) {
+    overflow: hidden;
+  }
   &::after {
     top: 112px;
     right: 0;
