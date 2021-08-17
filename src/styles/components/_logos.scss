@@ -1,6 +1,7 @@
 div.logos-wrapper {
   margin-bottom: 208px;
   position: relative;
+  z-index: 3;
   @media screen and (max-width: $screen-mobile) {
     padding: 0 32px;
     margin-bottom: 94px;
@@ -17,6 +18,14 @@ div.logos-wrapper {
     // background-position: right;
     content: '';
     z-index: 0;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $screen-mobile) {
+      max-width: 50vw;
+      background-position-x: right;
+      background-position-y: top;
+      top: 32px;
+    }
   }
   & > * {
     position: relative;

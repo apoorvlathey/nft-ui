@@ -18,6 +18,16 @@ div.cards-wrapper {
     top: 379px;
     background: url('../../images/oval-2.svg');
     z-index: -2;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $screen-mobile) {
+      width: 50vw;
+      top: -212px;
+      background-position-x: right;
+      background-position-y: top;
+      left: -32px;
+      background-size: contain;
+    }
   }
   h2 {
     font-size: 40px;
