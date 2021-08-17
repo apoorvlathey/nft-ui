@@ -1,7 +1,10 @@
 div.logos-wrapper {
   margin-bottom: 208px;
   position: relative;
-
+  @media screen and (max-width: $screen-mobile) {
+    padding: 0 32px;
+    margin-bottom: 94px;
+  }
   &::before {
     position: absolute;
     right: 0;
@@ -23,17 +26,36 @@ div.logos-wrapper {
     font-size: 40px;
     line-height: 60px;
     font-weight: bold;
+    @media screen and (max-width: $screen-mobile) {
+      font-size: 30px;
+      line-height: 120%;
+      text-align: left;
+    }
   }
   p {
     margin: 0;
     font-size: 24px;
     line-height: 36px;
     color: $colour-gray;
+    @media screen and (max-width: $screen-mobile) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 16px;
+      text-align: left;
+    }
   }
   & > div {
     margin-top: 71px;
+    @media screen and (max-width: $screen-mobile) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      margin: 0 -8px;
+      margin-top: 40px;
+    }
     div {
       position: relative;
+      margin: 0 -8px;
       & > span {
         display: block;
         padding: 2px 10px;
@@ -51,6 +73,9 @@ div.logos-wrapper {
           background: linear-gradient(110.77deg, #ffd0bc -242.14%, #963acf 244.12%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media screen and (max-width: $screen-mobile) {
+            font-size: 10px;
+          }
         }
       }
     }

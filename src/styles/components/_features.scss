@@ -4,10 +4,18 @@ div.features-wrapper {
   position: relative;
   width: 100vw;
   z-index: 2;
+  @media screen and (max-width: $screen-mobile) {
+    padding: 0 32px;
+    margin-bottom: 148px;
+  }
   h2 {
     font-size: 40px;
     font-weight: bold;
     list-style: 60px;
+    @media screen and (max-width: $screen-mobile) {
+      font-size: 30px;
+      line-height: 120%;
+    }
   }
   p {
     margin-top: 16px;
@@ -15,6 +23,11 @@ div.features-wrapper {
     line-height: 36px;
     color: $colour-gray;
     margin-bottom: 88px;
+    @media screen and (max-width: $screen-mobile) {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
   img.ninja {
     width: 521px;
@@ -22,12 +35,24 @@ div.features-wrapper {
     position: absolute;
     right: 0px;
     top: 200px;
+    @media screen and (max-width: $screen-mobile) {
+      // position: relative;
+      display: none;
+      max-width: 100vw;
+      max-height: 100vw;
+      object-fit: contain;
+    }
   }
   div.feature-list {
     display: grid;
     grid-template-columns: repeat(2, 350px);
     grid-template-rows: 1fr 1fr;
     grid-gap: 49px 32px;
+    @media screen and (max-width: $screen-mobile) {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 24px;
+    }
     div.feature-wrapper {
       div.icon-wrapper {
         width: 96px;
@@ -48,12 +73,20 @@ div.features-wrapper {
         font-size: 24px;
         line-height: 36px;
         font-weight: 600;
+        @media screen and (max-width: $screen-mobile) {
+          font-size: 24px;
+          line-height: 36px;
+        }
       }
       p {
         margin: 0;
         margin-top: 6px;
         font-size: 16px;
         line-height: 27px;
+        @media screen and (max-width: $screen-mobile) {
+          font-size: 18px;
+          line-height: 27px;
+        }
       }
     }
   }

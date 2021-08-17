@@ -4,6 +4,10 @@ div.cards-wrapper {
   margin-bottom: 200px;
   position: relative;
   z-index: 2;
+  @media screen and (max-width: $screen-mobile) {
+    width: calc(100vw - 32px);
+    margin-bottom: 78px;
+  }
   &::after {
     width: 504px;
     height: 865px;
@@ -19,9 +23,21 @@ div.cards-wrapper {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 80px;
+    @media screen and (max-width: $screen-mobile) {
+      margin-left: 16px;
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
   }
   div.title {
     margin-bottom: 24px;
+    @media screen and (max-width: $screen-mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      div.user {
+        margin-bottom: 8px;
+      }
+    }
     div.user {
       img {
         width: 56px;
@@ -60,8 +76,16 @@ div.cards-wrapper {
     padding: 32px;
     border-radius: 20px;
     width: calc(100vw - 320px);
+    @media screen and (max-width: $screen-mobile) {
+      width: 100%;
+      padding: 16px;
+      padding-bottom: 28px;
+    }
     div.list {
       gap: 24px;
+      @media screen and (max-width: $screen-mobile) {
+        flex-direction: column;
+      }
 
       div.card-wrapper {
         border-radius: 24px;

@@ -1,6 +1,9 @@
 header.header-wrapper {
   padding: 25px 160px;
   z-index: 512;
+  @media screen and (max-width: $screen-mobile) {
+    display: none;
+  }
   div.actions {
     display: flex;
     a {
