@@ -1,9 +1,8 @@
-import { Cards, Features, Footer, Header, Hero, Logos, MobileHeader, Profile, Start } from '../components';
+import { Cards, Features, Footer, Hero, Logos, MobileHeader, Profile, Start } from '../components';
 
 const Home = () => {
   return (
     <>
-      {/* <Header /> */}
       <MobileHeader />
       <div className='home-page-wrapper'>
         <Hero />

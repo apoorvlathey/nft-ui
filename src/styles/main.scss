@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 @import 'variables';
-@import 'components/main';
+@import 'components/main', 'pages/main';
 
 body,
 html {

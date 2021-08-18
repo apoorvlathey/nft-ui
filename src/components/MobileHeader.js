@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { Logo } from '.';
+import { Link } from 'react-router-dom';
 
 const building = (
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -56,7 +57,7 @@ const home = (
   </svg>
 );
 
-const Mobile = () => {
+const Mobile = ({ actions }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const _handleToggle = () => setIsCollapsed(!isCollapsed);
@@ -76,32 +77,38 @@ const Mobile = () => {
           isScrolled && 'scrolled',
         )}
       >
-        <Logo />
+        <Link to='/'>
+          <Logo />
+        </Link>
         <div onClick={_handleToggle} className={classNames('hamburger', isCollapsed && 'collapsed')}>
           <span />
           <span />
         </div>
         <div className='actions'>
-          <a href='/register' className={classNames('primary bg-gradient rounded-full')}>
-            Register
-          </a>
-          <a href='/login'>Login</a>
+          {actions || (
+            <>
+              <Link to='/register' className={classNames('primary bg-gradient rounded-full')}>
+                Register
+              </Link>
+              <Link to='/login'>Login</Link>
+            </>
+          )}
         </div>
         <nav className={classNames('mobile-menu-wrapper', isCollapsed && 'collapsed')}>
-          <a className='regular' href='/'>
+          <Link className='regular' to='/'>
             {home}
             <span>Home</span>
-          </a>
-          <a className='regular' href='/about'>
+          </Link>
+          <Link className='regular' to='/about'>
             {building}
             <span>About us</span>
-          </a>
-          <a href='/register' className='primary bg-gradient'>
+          </Link>
+          <Link to='/register' className='primary bg-gradient'>
             <span>Register</span>
-          </a>
-          <a href='/register' className='secondary'>
+          </Link>
+          <Link to='/login' className='secondary'>
             <span>Login</span>
-          </a>
+          </Link>
         </nav>
       </header>
     </>

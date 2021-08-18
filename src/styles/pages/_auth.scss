@@ -1,0 +1,46 @@
+div.auth-page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  svg.gradient {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+  }
+  &::before {
+    width: 504px;
+    height: 537px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    content: '';
+    background: url('../../images/oval-auth-left.svg');
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+  &::after {
+    width: 438px;
+    height: 838px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    content: '';
+    background: url('../../images/oval-auth-right.svg');
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+}
