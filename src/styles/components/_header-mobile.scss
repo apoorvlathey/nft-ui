@@ -95,10 +95,16 @@ nav.mobile-menu-wrapper {
   @media screen and (max-width: $screen-mobile) {
     right: 32px;
   }
-  &.collapsed {
-    transform: translateY(-48px);
-    opacity: 0;
-    visibility: hidden;
+
+  transform: translateY(-48px);
+  opacity: 0;
+  visibility: hidden;
+  @media screen and (max-width: $screen-tablet) {
+    &:not(.collapsed) {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
   }
   a.regular {
     display: flex;
