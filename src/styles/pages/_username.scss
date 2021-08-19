@@ -1,0 +1,193 @@
+div.username-page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 160px;
+  padding-bottom: 64px;
+  @media screen and (max-width: $screen-tablet) {
+    padding-left: 64px;
+  }
+  @media screen and (max-width: $screen-mobile) {
+    padding-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &::after {
+    width: 769px;
+    height: 100vh;
+    background: url('../../images/oval-username.svg');
+    background-size: contain;
+    background-position: left;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    background-repeat: no-repeat;
+    z-index: 1;
+    @media screen and (max-width: $screen-tablet) {
+      background-image: url('../../images/oval-username-full.svg');
+      height: 100vh;
+      width: calc(100vw - 180px);
+      background-size: contain;
+      background-position: left top;
+    }
+    @media screen and (max-width: $screen-mobile) {
+      max-width: calc(100vw - 64px);
+      background-position: top right;
+      background-size: contain;
+      height: 652px;
+      left: -32px;
+    }
+  }
+  &::before {
+    width: 382px;
+    height: 463px;
+    background: url('../../images/banner-cook.png');
+    background-size: contain;
+    background-position: center;
+    display: block;
+    position: absolute;
+    left: 914px;
+    content: '';
+    background-repeat: no-repeat;
+    z-index: 2;
+    @media screen and (max-width: $screen-tablet) {
+      width: 319px;
+      height: 315px;
+      left: 420px;
+      top: calc(50% + 70px);
+      transform: translateY(-50%);
+    }
+    @media screen and (max-width: $screen-mobile) {
+      width: calc(100vw - 96px);
+      height: calc(100vw - 96px);
+      position: static;
+      transform: none;
+      margin: auto;
+      margin-top: 132px;
+      margin-bottom: 42px;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 3;
+    @media screen and (max-width: $screen-mobile) {
+      width: calc(100vw - 64px);
+      margin: auto;
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 120%;
+      background: linear-gradient(to right, #4b05a4, #ff9c64);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-width: 360px;
+      @media screen and (max-width: $screen-tablet) {
+        font-size: 32px;
+        line-height: 140%;
+      }
+      @media screen and (max-width: $screen-mobile) {
+        font-size: 30px;
+        line-height: 130%;
+      }
+    }
+    div.row {
+      display: flex;
+      align-items: center;
+      margin-top: 48px;
+      @media screen and (max-width: $screen-tablet) {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'input input' 'b c';
+        grid-gap: 48px 0;
+      }
+      @media screen and (max-width: $screen-tablet) {
+        margin-top: 24px;
+      }
+      div.input-wrapper {
+        position: relative;
+        margin-right: 16px;
+        @media screen and (max-width: $screen-tablet) {
+          margin-right: 0;
+          grid-area: input;
+        }
+        input {
+          height: 56px;
+          display: block;
+          width: 340px;
+          border-radius: 16px;
+          padding-left: 16px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          outline: none;
+
+          filter: drop-shadow(0px 13px 24px rgba(88, 81, 103, 0.04));
+          @media screen and (max-width: $screen-mobile) {
+            max-width: calc(100vw - 64px);
+          }
+        }
+        & > svg {
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        & > span {
+          padding: 8px;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 21px;
+          display: flex;
+          align-items: center;
+          position: absolute;
+          top: calc(100%);
+          left: 0;
+          svg {
+            margin-right: 8px;
+          }
+          &.error {
+            padding-left: 0;
+            color: $colour-coral;
+          }
+          span {
+            color: $colour-gray;
+          }
+        }
+      }
+      button {
+        height: 56px;
+        padding: 0 32px;
+        border-radius: 16px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        &.primary {
+          color: white;
+        }
+        &:disabled {
+          background: linear-gradient(110.77deg, #d0c8c5 -142.14%, #bfb4c6 144.12%);
+          color: $colour-gray;
+        }
+
+        &:not(.primary) {
+          background: linear-gradient(110.77deg, #ffd0bc -142.14%, #963acf 144.12%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
