@@ -12,25 +12,17 @@ const banners = [
 const Profile = () => {
   return (
     <>
-      <MobileHeader
-        top={35}
-        actions={
-          <>
-            <a>Already have an account?</a>
-            <a href='/login' className='primary bg-gradient rounded-full'>
-              Login
-            </a>
-          </>
-        }
-      />
+      <MobileHeader top={35} actions={<></>} className='dashboard' />
       <div className='profile-wrapper'>
         <nav>
           <h1>@wilmaflint</h1>
           <span className='copy bg-gradient'>Copy</span>
         </nav>
         <article>
-          <Search />
-          <Filter />
+          <div className='content'>
+            <Search />
+            <Filter />
+          </div>
         </article>
         <main>
           {banners.map((banner, i) => (

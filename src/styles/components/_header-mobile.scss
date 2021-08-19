@@ -8,6 +8,14 @@ header.mobile-header-wrapper {
     background: transparentize($colour-bg, 0.4);
     border-color: transparentize($colour-indigo, 0.9);
   }
+  &.dashboard {
+    padding-left: 76px;
+    padding-right: 76px;
+    @media screen and (max-width: $screen-tablet) {
+      padding-left: 39px;
+      padding-right: 39px;
+    }
+  }
   div.actions {
     display: flex;
     a {

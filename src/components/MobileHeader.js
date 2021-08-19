@@ -57,7 +57,7 @@ const home = (
   </svg>
 );
 
-const Mobile = ({ actions, top }) => {
+const Mobile = ({ actions, top, className }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const _handleToggle = () => setIsCollapsed(!isCollapsed);
@@ -72,8 +72,9 @@ const Mobile = ({ actions, top }) => {
   return (
     <>
       <header
-        style={top ? { top } : undefined}
+        style={top ? { paddingTop: 25 + top } : undefined}
         className={classNames(
+          className,
           'mobile-header-wrapper fixed flex justify-between items-center w-screen top-0 ',
           isScrolled && 'scrolled',
         )}

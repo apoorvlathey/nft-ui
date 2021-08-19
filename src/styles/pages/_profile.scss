@@ -4,11 +4,17 @@ div.profile-wrapper {
   grid-template-rows: auto 1fr;
   grid-gap: 26px 32px;
   grid-template-areas: 'nav x' 'filter main';
-  height: 100vh;
   width: 100vw;
-  padding: 0 86px;
   padding-top: 215px;
   background: #f7f7f7;
+  padding-left: 86px;
+  padding-right: 86px;
+  @media screen and (max-width: $screen-tablet) {
+    grid-template-areas: 'nav filter' 'main main';
+    padding-left: 39px;
+    padding-right: 39px;
+    padding-top: 160px;
+  }
   nav {
     grid-area: nav;
     display: flex;
@@ -37,13 +43,20 @@ div.profile-wrapper {
   }
   article {
     grid-area: filter;
-    position: sticky;
-    top: 120px;
+    height: 100%;
+    div.content {
+      @media screen and (max-width: $screen-tablet) {
+        display: none;
+      }
+      position: sticky;
+      top: 160px;
+    }
   }
   main {
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
     grid-gap: 24px;
     padding-bottom: 96px;
   }
