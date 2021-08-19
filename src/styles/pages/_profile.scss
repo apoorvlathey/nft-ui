@@ -1,0 +1,50 @@
+div.profile-wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 26px 32px;
+  grid-template-areas: 'nav x' 'filter main';
+  height: 100vh;
+  width: 100vw;
+  padding: 0 86px;
+  padding-top: 215px;
+  background: #f7f7f7;
+  nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      margin: 0;
+      background: linear-gradient(to right, #4b05a4 -142.14%, #ff9c64 142.14%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    span.copy {
+      padding: 8px 12px;
+      border-radius: 500px;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 12px;
+
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+  }
+  article {
+    grid-area: filter;
+    position: sticky;
+    top: 120px;
+  }
+  main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 24px;
+    padding-bottom: 96px;
+  }
+}
