@@ -2,8 +2,30 @@ div.wallet-creation-page {
   padding: 0 160px;
   display: flex;
   height: 100vh;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  padding-top: 160px;
+  button {
+    height: 56px;
+    padding: 0 32px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    &.primary {
+      color: white;
+    }
+    &:disabled {
+      background: linear-gradient(110.77deg, #d0c8c5 -142.14%, #bfb4c6 144.12%);
+      color: $colour-gray;
+    }
+
+    &:not(.primary) {
+      background: linear-gradient(110.77deg, #ffd0bc -142.14%, #963acf 144.12%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
   @media screen and (max-width: $screen-tablet) {
     flex-direction: column;
     justify-content: flex-start;
@@ -40,16 +62,22 @@ div.wallet-creation-page {
         line-height: 130%;
       }
     }
-  }
-  img {
-    width: 355px;
-    height: 338px;
-    object-fit: contain;
+    img {
+      width: 355px;
+      height: 338px;
+      object-fit: contain;
+      transform: scaleX(-1);
+    }
   }
 
   div.selector {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    width: 491px;
+    @media screen and (max-width: $screen-mobile) {
+      width: 100%;
+    }
     h2 {
       font-weight: bold;
       font-size: 24px;
@@ -105,6 +133,35 @@ div.wallet-creation-page {
             font-size: 12px;
             line-height: 18px;
           }
+        }
+      }
+    }
+    div.bottom {
+      justify-content: center;
+      display: none;
+      margin-top: 36px;
+      @media screen and (max-width: $screen-mobile) {
+        display: flex;
+      }
+      a {
+        padding: 12px 24px;
+        border-radius: 500px;
+        background: white;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        color: $colour-gray;
+      }
+    }
+    div.entry {
+      display: flex;
+      padding-left: 24px;
+      gap: 16px;
+      @media screen and (max-width: $screen-mobile) {
+        padding-left: 0;
+        flex-direction: column;
+        & > * {
+          width: 100%;
         }
       }
     }

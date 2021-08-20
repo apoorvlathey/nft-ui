@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LogoIcon, MobileHeader } from '../components';
+import { Input, LogoIcon, MobileHeader } from '../components';
 
 const networks = [
   { logo: 'ethereum', label: 'Ethereum', value: 'eth' },
@@ -9,12 +9,19 @@ const networks = [
 
 const Creation = () => {
   const [network, setNetwork] = useState('eth');
+  const [username, setUsername] = useState('');
 
   const _handleNetwork = (network) => () => setNetwork(network);
 
   return (
     <>
-      <MobileHeader actions={<></>} />
+      <MobileHeader
+        actions={
+          <>
+            <a className='skip'>Skip Now</a>
+          </>
+        }
+      />
       <div className='wallet-creation-page'>
         <div className='col'>
           <h1>Connect your first wallet</h1>
@@ -32,11 +39,30 @@ const Creation = () => {
               />
             ))}
           </div>
-          <h2>Choose wallet</h2>
-          <div className='row'>
-            <Option logo='metamask' label='Metamask' />
-            <Option logo='walletconnect' label='Wallet connect' />
-            <Option logo='coinbase' label='Coinbase' />
+          {network !== 'nba' ? (
+            <>
+              <h2>Choose wallet</h2>
+              <div className='row'>
+                <Option logo='metamask' label='Metamask' />
+                <Option logo='walletconnect' label='Wallet connect' />
+                <Option logo='coinbase' label='Coinbase' />
+              </div>
+            </>
+          ) : (
+            <>
+              <h2>Choose account</h2>
+              <div className='entry'>
+                <Input value={username} onChange={setUsername} />
+                <button type='submit' className='primary bg-gradient'>
+                  Apply
+                </button>
+              </div>
+            </>
+          )}
+          <div className='bottom'>
+            <a href='' className='skip'>
+              Skip Now
+            </a>
           </div>
         </div>
       </div>

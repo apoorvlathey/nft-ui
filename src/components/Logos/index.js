@@ -5,7 +5,7 @@ import logo4 from './LOGO_4.svg';
 import logo5 from './LOGO_5.svg';
 import logo6 from './LOGO_6.svg';
 
-const logos = [logo1, logo4, logo2, logo4, logo5, logo6];
+const logos = [logo1, logo3, logo2, logo4, logo5, logo6];
 
 const Logos = () => {
   return (

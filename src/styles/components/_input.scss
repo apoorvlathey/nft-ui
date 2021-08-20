@@ -1,0 +1,52 @@
+div.input-wrapper {
+  position: relative;
+  margin-right: 16px;
+  @media screen and (max-width: $screen-tablet) {
+    margin-right: 0;
+    grid-area: input;
+  }
+  input {
+    height: 56px;
+    display: block;
+    width: 340px;
+    border-radius: 16px;
+    padding-left: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+
+    filter: drop-shadow(0px 13px 24px rgba(88, 81, 103, 0.04));
+    @media screen and (max-width: $screen-mobile) {
+      max-width: calc(100vw - 64px);
+    }
+  }
+  & > svg {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  & > span {
+    padding: 8px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: calc(100%);
+    left: 0;
+    svg {
+      margin-right: 8px;
+    }
+    &.error {
+      padding-left: 0;
+      color: $colour-coral;
+    }
+    span {
+      color: $colour-gray;
+    }
+  }
+}

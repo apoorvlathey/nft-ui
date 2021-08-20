@@ -2,7 +2,13 @@ div.logo-wrapper {
   div {
     width: 36px;
     height: 36px;
-    background: $colour-indigo;
+    position: relative;
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
   }
   h1 {
     font-family: $title-font;
