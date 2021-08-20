@@ -11,5 +11,6 @@ export { default as Logos } from './Logos/index';
 export { default as MobileHeader } from './MobileHeader';
 export { default as Search } from './Search';
 export { default as Start } from './Start';
+export { default as LogoIcon } from './Logo/index';
 
 export { default as Filter } from './Filter';

@@ -1,0 +1,112 @@
+div.wallet-creation-page {
+  padding: 0 160px;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: $screen-tablet) {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 200px 72px;
+    height: fit-content;
+    div.col:first-of-type {
+      img {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: $screen-mobile) {
+    align-items: flex-start;
+    padding: 152px 32px;
+  }
+  div.col:first-of-type {
+    h1 {
+      background: linear-gradient(to right, #4b05a4, #ff9c64);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 120%;
+      margin-bottom: 48px;
+      max-width: 420px;
+      @media screen and (max-width: $screen-tablet) {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 140%;
+      }
+      @media screen and (max-width: $screen-mobile) {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 130%;
+      }
+    }
+  }
+  img {
+    width: 355px;
+    height: 338px;
+    object-fit: contain;
+  }
+
+  div.selector {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 120%;
+      margin-bottom: 40px;
+      margin-bottom: 32px;
+      padding-left: 24px;
+      @media screen and (max-width: $screen-tablet) {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 120%;
+      }
+      @media screen and (max-width: $screen-mobile) {
+        padding: 0;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+    div.row {
+      display: flex;
+      margin-bottom: 32px;
+      @media screen and (max-width: $screen-mobile) {
+        margin-left: -16px;
+      }
+      div.option-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        img {
+          width: 152px;
+          height: 164px;
+          @media screen and (max-width: $screen-mobile) {
+            width: calc(152px * 0.72);
+            height: calc(164px * 0.72);
+          }
+        }
+        span {
+          text-align: center;
+          position: absolute;
+          top: calc(100% - 24px);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 100%;
+          margin: 0 24px;
+          @media screen and (max-width: $screen-mobile) {
+            top: calc(100% - 16px);
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
