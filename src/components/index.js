@@ -13,5 +13,6 @@ export { default as Search } from './Search';
 export { default as Start } from './Start';
 export { default as LogoIcon } from './Logo/index';
 export { default as Input } from './Input';
+export { default as WalletList } from './WalletList';
 
 export { default as Filter } from './Filter';

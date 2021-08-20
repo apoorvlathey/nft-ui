@@ -1,4 +1,6 @@
-const Banner = ({ banner, title, value, price }) => {
+import { SortableContainer, SortableElement } from 'react-sortable-hoc';
+
+const Banner = ({ value: { banner, title, value, price } }) => {
   return (
     <div className='banner-segment-wrapper'>
       <img src={banner} alt={`${title}'s banner`} />
@@ -11,4 +13,4 @@ const Banner = ({ banner, title, value, price }) => {
   );
 };
 
-export default Banner;
+export default SortableElement(Banner);
