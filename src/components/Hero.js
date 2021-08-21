@@ -3,7 +3,7 @@ const Hero = () => {
     <div className='w-screen flex flex-col items-center hero-wrapper'>
       <h2>Show the world</h2>
       <p>A dope showroom for your NFTs</p>
-      <a className='bg-gradient rounded-full'>Claim username</a>
+      <a href='/username' className='bg-gradient rounded-full'>Claim username</a>
       <img src='/images/hero.png' alt='' />
       <svg preserveAspectRatio='none' viewBox='0 0 2048 2048'>
         <defs>

@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ethersproject/providers": "^5.4.4",
+    "@ethersproject/units": "^5.4.0",
+    "@magic-ext/oauth": "^0.9.0",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "@web3-react/walletconnect-connector": "^6.2.4",
+    "magic-sdk": "^4.4.1",
     "@craco/craco": "^6.2.0",
     "@dnd-kit/core": "^3.1.1",
     "@dnd-kit/sortable": "^4.0.0",
