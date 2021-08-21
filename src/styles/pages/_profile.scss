@@ -6,9 +6,9 @@ div.profile-wrapper {
   grid-template-areas: 'nav x' 'filter main';
   width: 100vw;
   padding-top: 215px;
-  background: #f6f5ff;
-  padding-left: 86px;
-  padding-right: 86px;
+  background: rgb(242, 247, 253);
+  padding-left: 160px;
+  padding-right: 160px;
   @media screen and (max-width: $screen-tablet) {
     grid-template-areas: 'nav filter' 'main main';
     padding-left: 39px;
@@ -56,7 +56,7 @@ div.profile-wrapper {
     grid-area: main;
     &.grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
       grid-gap: 24px;
       padding-bottom: 96px;

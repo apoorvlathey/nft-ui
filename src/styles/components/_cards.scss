@@ -125,6 +125,11 @@ div.cards-wrapper {
             display: none;
           }
         }
+        @media screen and (max-width: $screen-mobile) {
+          &:not(:first-child) {
+            display: none;
+          }
+        }
         & > img {
           height: 240px;
           width: 100%;

@@ -3,7 +3,7 @@ import { Cards, Features, Footer, Hero, Logos, MobileHeader, Profile, Start } fr
 const Home = () => {
   return (
     <>
-      <MobileHeader />
+      <MobileHeader sticky />
       <div className='home-page-wrapper'>
         <Hero />
         <Cards />

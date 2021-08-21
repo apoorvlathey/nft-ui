@@ -1,5 +1,8 @@
 div.card-container {
   position: relative;
+  @media screen and (max-width: $screen-mobile) {
+    margin-top: 86px;
+  }
   &.login {
     div.card-segment-wrapper {
       padding-top: 148px;
@@ -89,6 +92,11 @@ div.card-container {
 
       justify-content: center;
       align-items: center;
+      transition: 480ms;
+      cursor: pointer;
+      &:hover {
+        background: $gradient-hover;
+      }
       &::before {
         width: 24px;
         height: 24px;

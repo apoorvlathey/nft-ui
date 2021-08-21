@@ -23,48 +23,50 @@ const Creation = () => {
         }
       />
       <div className='wallet-creation-page'>
-        <div className='col'>
-          <h1>Connect your first wallet</h1>
-          <img src='/images/fisherman.png' alt='Fisherman' />
-        </div>
-        <div className='col selector'>
-          <h2>Choose network</h2>
-          <div className='row'>
-            {networks.map((_network) => (
-              <Option
-                onSelect={_handleNetwork(_network.value)}
-                {..._network}
-                key={_network.value}
-                active={_network.value === network}
-              />
-            ))}
+        <main>
+          <div className='col'>
+            <h1>Connect your first wallet</h1>
+            <img src='/images/fisherman.png' alt='Fisherman' />
           </div>
-          {network !== 'nba' ? (
-            <>
-              <h2>Choose wallet</h2>
-              <div className='row'>
-                <Option logo='metamask' label='Metamask' />
-                <Option logo='walletconnect' label='Wallet connect' />
-                <Option logo='coinbase' label='Coinbase' />
-              </div>
-            </>
-          ) : (
-            <>
-              <h2>Choose account</h2>
-              <div className='entry'>
-                <Input value={username} onChange={setUsername} />
-                <button type='submit' className='primary bg-gradient'>
-                  Apply
-                </button>
-              </div>
-            </>
-          )}
-          <div className='bottom'>
-            <a href='' className='skip'>
-              Skip Now
-            </a>
+          <div className='col selector'>
+            <h2>Choose network</h2>
+            <div className='row'>
+              {networks.map((_network) => (
+                <Option
+                  onSelect={_handleNetwork(_network.value)}
+                  {..._network}
+                  key={_network.value}
+                  active={_network.value === network}
+                />
+              ))}
+            </div>
+            {network !== 'nba' ? (
+              <>
+                <h2>Choose wallet</h2>
+                <div className='row'>
+                  <Option logo='metamask' label='Metamask' />
+                  <Option logo='walletconnect' label='Wallet connect' />
+                  <Option logo='coinbase' label='Coinbase' />
+                </div>
+              </>
+            ) : (
+              <>
+                <h2>Choose account</h2>
+                <div className='entry'>
+                  <Input value={username} onChange={setUsername} />
+                  <button type='submit' className='primary bg-gradient'>
+                    Apply
+                  </button>
+                </div>
+              </>
+            )}
+            <div className='bottom'>
+              <a href='' className='skip'>
+                Skip Now
+              </a>
+            </div>
           </div>
-        </div>
+        </main>
       </div>
     </>
   );
