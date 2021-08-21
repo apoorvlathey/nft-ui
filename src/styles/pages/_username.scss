@@ -46,6 +46,24 @@ div.username-page-wrapper {
       left: -32px;
     }
   }
+  &.success {
+    &::before {
+      @keyframes slideout {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(100vw);
+          // background: url('../../../images/karate.png');
+        }
+        100% {
+          // background: url('../../../images/karate.png');
+          transform: translateX(0);
+        }
+      }
+      animation: slideout 1000ms ease-in-out forwards;
+    }
+  }
   &::before {
     width: 382px;
     height: 463px;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Cards, Features, Footer, Hero, Logos, MobileHeader, Profile, Start } from '../components';
 import Input from '../components/Input';
+import classNames from 'classnames';
 
 const Username = () => {
   const [username, setUsername] = useState('');
@@ -11,7 +12,7 @@ const Username = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    setState(state === 'ERROR' ? 'SUCCESS' : 'ERROR');
+    setState('SUCCESS');
   };
   const _handleCancel = (e) => {
     e.preventDefault();
@@ -23,15 +24,15 @@ const Username = () => {
   return (
     <>
       <MobileHeader actions={<></>} />
-      <div className='username-page-wrapper'>
+      <div className={classNames('username-page-wrapper', state === 'SUCCESS' && 'success')}>
         <form onSubmit={_handleSubmit}>
           <h1>Grab your magic internet name</h1>
           <div className='row'>
             <Input username value={username} onChange={setUsername} state={state} error={error} />
             <button disabled={state === 'ERROR'} type='submit' className='primary bg-gradient'>
-              Apply
+              {state === 'SUCCESS' ? 'Next' : 'Check'}
             </button>
-            <button onClick={_handleCancel}>Cancel</button>
+            {/* {state === 'SUCCESS' && <button onClick={_handleCancel}>Cancel</button>} */}
           </div>
         </form>
       </div>

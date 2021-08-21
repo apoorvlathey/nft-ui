@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { useRef } from 'react';
 
 const errorIcon = (
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -24,13 +25,19 @@ const successIcon = (
 
 const Input = ({ error, label, value, onChange, state, username }) => {
   const _handleChange = ({ target: { value } }) => onChange(value);
+  const ref = useRef();
+
+  const _handleClear = () => {
+    onChange('');
+    ref.current.focus();
+  };
   return (
     <div className={classNames('input-wrapper', state?.toLowerCase())}>
-      <input value={value} onChange={_handleChange} type='text' placeholder='@username' />
+      <input ref={ref} value={value} onChange={_handleChange} type='text' placeholder='@username' />
       {state === 'ERROR' && errorIcon}
       {state === 'SUCCESS' && successIcon}
       {state === 'ERROR' ? (
-        <span className='error'>
+        <span className='error' onClick={_handleClear}>
           <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path
               fillRule='evenodd'
