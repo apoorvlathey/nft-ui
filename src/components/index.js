@@ -7,6 +7,7 @@ export { default as Header } from './Header';
 export { default as Hero } from './Hero';
 export { default as Logo } from './Logo';
 export { default as Profile } from './Profile';
+export { default as ProfileBanner } from './ProfileBanner';
 export { default as Logos } from './Logos/index';
 export { default as MobileHeader } from './MobileHeader';
 export { default as Search } from './Search';

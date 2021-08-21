@@ -28,7 +28,7 @@ const Profiles = () => {
 
 const Profile = ({ name, price, value, avatar }) => {
   return (
-    <div className='profile-wrapper'>
+    <div className='profile-segment-wrapper'>
       <img src={avatar} alt={`${name}'s avatar`} />
       <div className='body'>
         <span className='name'>{name}</span>

@@ -23,6 +23,7 @@ div.cards-wrapper {
     background: url('../../images/oval-2.svg');
     z-index: -2;
     background-repeat: no-repeat;
+    pointer-events: none;
 
     @media screen and (max-width: $screen-mobile) {
       width: 50vw;
@@ -96,8 +97,8 @@ div.cards-wrapper {
     }
   }
   div.body {
-    background: #eff8ff;
-    padding: 32px;
+    // background: #eff8ff;
+    // padding: 32px;
     border-radius: 20px;
     width: calc(100vw - 320px);
     @media screen and (max-width: $screen-tablet) {
@@ -118,7 +119,7 @@ div.cards-wrapper {
       div.card-wrapper {
         border-radius: 24px;
         box-shadow: 0px 32px 62px rgba(88, 81, 103, 0.12), 0px 13px 24px rgba(88, 81, 103, 0.04);
-        padding: 24px;
+        padding: 22px;
         @media screen and (max-width: $screen-tablet) {
           &:last-child {
             display: none;

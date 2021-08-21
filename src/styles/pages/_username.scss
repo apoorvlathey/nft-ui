@@ -30,6 +30,7 @@ div.username-page-wrapper {
     content: '';
     background-repeat: no-repeat;
     z-index: 1;
+    pointer-events: none;
     @media screen and (max-width: $screen-tablet) {
       background-image: url('../../images/oval-username-full.svg');
       height: 100vh;

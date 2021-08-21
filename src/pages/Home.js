@@ -6,8 +6,8 @@ const Home = () => {
       <MobileHeader />
       <div className='home-page-wrapper'>
         <Hero />
-        <Logos />
         <Cards />
+        <Logos />
         <Features />
         <Profile />
         <Start />

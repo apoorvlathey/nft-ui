@@ -21,6 +21,7 @@ html {
     content: '';
     background: $colour-bg;
     z-index: -12;
+    pointer-events: none;
   }
   * {
     box-sizing: border-box;

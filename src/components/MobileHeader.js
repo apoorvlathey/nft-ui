@@ -75,8 +75,8 @@ const Mobile = ({ actions, top, className }) => {
         style={top ? { paddingTop: 25 + top } : undefined}
         className={classNames(
           className,
-          'mobile-header-wrapper fixed flex justify-between items-center w-screen top-0 ',
-          isScrolled && 'scrolled',
+          'mobile-header-wrapper absolute flex justify-between items-center w-screen top-0 ',
+          // isScrolled && 'scrolled',
         )}
       >
         <Link to='/'>

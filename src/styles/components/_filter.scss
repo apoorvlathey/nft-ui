@@ -38,6 +38,7 @@ div.filter-wrapper {
           background: white;
           display: block;
           content: '';
+          pointer-events: none;
         }
         div.knob {
           background: linear-gradient(110.77deg, #ffd0bc -142.14%, #963acf 144.12%);

@@ -1,0 +1,79 @@
+div.profile-banner-wrapper {
+  padding: 16px;
+  background-color: white;
+  border-radius: 16px;
+  width: 225px;
+  position: fixed;
+  top: 42px;
+  right: 86px;
+  box-shadow: 0px 13px 24px rgba(88, 81, 103, 0.04);
+  div.user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 500px;
+      margin-right: 12px;
+      object-fit: cover;
+    }
+    span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      /* identical to box height, or 100% */
+
+      text-align: center;
+    }
+    svg {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      transition: 320ms;
+    }
+    &.collapsed {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  div.options {
+    margin-top: 16px;
+    height: 132px;
+    transition: 320ms;
+    opacity: 1;
+    overflow: hidden;
+    &.collapsed {
+      opacity: 0;
+      height: 0;
+      margin-top: 0;
+    }
+    a {
+      padding: 0 16px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 16px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      /* identical to box height, or 100% */
+
+      text-align: center;
+
+      svg {
+        margin-right: 12px;
+        fill: $colour-gray;
+      }
+      &.active {
+        color: #ffffff;
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+}

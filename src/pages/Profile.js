@@ -9,6 +9,7 @@ import {
   Hero,
   Logos,
   MobileHeader,
+  ProfileBanner,
   Search,
   Start,
   WalletList,
@@ -31,7 +32,11 @@ const Profile = () => {
   };
   return (
     <>
-      <MobileHeader top={35} actions={<></>} className='dashboard' />
+      <MobileHeader
+        top={35}
+        actions={<ProfileBanner name='Anders' avatar='/images/avatar.jpg' />}
+        className='dashboard'
+      />
       <div className='profile-wrapper'>
         <nav>
           <h1>@wilmaflint</h1>
