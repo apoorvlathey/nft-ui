@@ -1,48 +1,60 @@
-div.banner-segment-wrapper {
-  background: #ffffff;
-  /* SH */
-
-  box-shadow: 0px 32px 62px rgba(88, 81, 103, 0.12), 0px 13px 24px rgba(88, 81, 103, 0.04);
-  border-radius: 16px;
-
-  padding: 20px;
-  img {
-    height: 240px;
-    width: 100%;
-    border-radius: 16px;
-    object-fit: cover;
-  }
-  h2 {
-    margin: 16px 0;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 30px;
-  }
-  div.body {
-    display: flex;
-    align-items: center;
-    div.price {
-      border: 2.6px solid $colour-green;
-      box-sizing: border-box;
-      border-radius: 4px;
-      padding: 8px;
-      color: $colour-green;
-
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 12px;
-      /* identical to box height, or 100% */
-
-      text-transform: uppercase;
+div.banner-segment-container {
+  &.active {
+    background: red;
+    div.wrapper {
+      transform: rotate(50deg);
     }
-    span.value {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 21px;
-      /* identical to box height */
+  }
+  div.wrapper {
+    background: #ffffff;
+    /* SH */
 
-      color: #58536d;
-      margin-left: 8px;
+    box-shadow: 0px 32px 62px rgba(88, 81, 103, 0.12), 0px 13px 24px rgba(88, 81, 103, 0.04);
+    border-radius: 16px;
+
+    padding: 20px;
+
+    position: relative;
+    z-index: 6;
+
+    img {
+      height: 240px;
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+    h2 {
+      margin: 16px 0;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    div.body {
+      display: flex;
+      align-items: center;
+      div.price {
+        border: 2.6px solid $colour-green;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 8px;
+        color: $colour-green;
+
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 12px;
+        /* identical to box height, or 100% */
+
+        text-transform: uppercase;
+      }
+      span.value {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+
+        color: #58536d;
+        margin-left: 8px;
+      }
     }
   }
 }

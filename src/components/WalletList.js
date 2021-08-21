@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Wallet from './Banner';
 
 import { SortableContainer } from 'react-sortable-hoc';
@@ -15,12 +15,41 @@ const wallet = (
   </svg>
 );
 const WalletList = (props) => {
+  const wrapper = useRef();
+  const [placeholder, setPlaceholder] = useState(null);
+
+  useEffect(() => {
+    // const bbox = wrapper.current.getBoundingClientRect();
+    if (props.placeholder) {
+      setPlaceholder({
+        x: props.placeholder.x,
+        y: props.placeholder.y,
+        width: props.placeholder.width,
+        height: props.placeholder.height,
+      });
+    } else setPlaceholder(null);
+  }, [JSON.stringify(props.placeholder)]);
+
   return (
-    <main className={classNames(props.items.length > 1 ? 'grid' : 'empty')}>
-      {props.items.map((banner, i) => (
-        <Wallet value={banner} index={i} key={`key-${i}`} />
-      ))}
-      {!props.items.length && <Empty />}
+    <main ref={wrapper}>
+      <div className={classNames(props.items.length > 1 ? 'grid' : 'empty')}>
+        {props.items.map((banner, i) => (
+          <Wallet active={props.sorted === i} value={banner} index={i} />
+        ))}
+        {placeholder && (
+          <div
+            className='placeholder'
+            style={{
+              top: placeholder.y,
+              left: placeholder.x,
+              width: placeholder.width,
+              height: placeholder.height,
+            }}
+          />
+        )}
+
+        {!props.items.length && <Empty />}
+      </div>
     </main>
   );
 };

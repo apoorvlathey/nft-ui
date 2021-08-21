@@ -24,6 +24,6 @@ Creation page
 [] Large screens look a bit funny (https://imgur.com/a/ErybSiA). Ideally, if we have larger screens, we add the space in the left and right side not in the middle. This could be a general problem across the site.
 
 Profile page
-[] Missing: Placeholder while dragging and dropping
-[] New paddings and background color for profile page (example in Figma on New profile page final)
-[] UX bug: It's really hard to scroll through the profile page on mobile because even the slightest touch on a card starts re-ordering. Can we make it so that the user has to hold the card for a second or two before it starts reordering?
+[x] Missing: Placeholder while dragging and dropping
+[x] New paddings and background color for profile page (example in Figma on New profile page final)
+[x] UX bug: It's really hard to scroll through the profile page on mobile because even the slightest touch on a card starts re-ordering. Can we make it so that the user has to hold the card for a second or two before it starts reordering?

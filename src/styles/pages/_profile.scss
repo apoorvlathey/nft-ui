@@ -54,44 +54,57 @@ div.profile-wrapper {
   }
   main {
     grid-area: main;
-    &.grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-
-      grid-gap: 24px;
-      padding-bottom: 96px;
+    // position: relative;
+    div.placeholder {
+      position: fixed;
+      // z-index: -2;
+      background: red;
+      background: #fefaff;
+      box-shadow: 0px 32px 62px rgba(88, 81, 103, 0.12), 0px 13px 24px rgba(88, 81, 103, 0.04);
+      border-radius: 24px;
+      // z-index: 1;
+      border: 2px dashed #963acf;
     }
-    &.empty {
-      div.empty-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 120px;
-        img {
-          width: 309px;
-          height: 309px;
-        }
-        h2 {
-          font-weight: bold;
-          font-size: 32px;
-          line-height: 100%;
-          margin-top: 16px;
-        }
-        a {
-          padding: 24px 64px;
-          border-radius: 500px;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 16px;
-          text-align: center;
-          color: white;
-          display: flex;
-          align-items: center;
-          margin-top: 48px;
+    div {
+      &.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 
-          svg {
-            margin-right: 12px;
+        grid-gap: 24px;
+        padding-bottom: 96px;
+      }
+      &.empty {
+        div.empty-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 120px;
+          img {
+            width: 309px;
+            height: 309px;
+          }
+          h2 {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 100%;
+            margin-top: 16px;
+          }
+          a {
+            padding: 24px 64px;
+            border-radius: 500px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            margin-top: 48px;
+
+            svg {
+              margin-right: 12px;
+            }
           }
         }
       }
