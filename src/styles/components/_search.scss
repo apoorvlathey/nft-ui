@@ -6,10 +6,16 @@ div.search-wrapper {
   height: 56px;
   position: relative;
   margin-bottom: 24px;
+  @media screen and (max-width: $screen-mobile) {
+    max-width: 56px;
+  }
   svg {
     position: absolute;
     left: 20px;
     top: 16px;
+    @media screen and (max-width: $screen-mobile) {
+      left: 16px;
+    }
   }
   input {
     line-height: 56px;
@@ -19,5 +25,8 @@ div.search-wrapper {
     background: none;
     border: none;
     outline: none;
+    @media screen and (max-width: $screen-mobile) {
+      display: none;
+    }
   }
 }
