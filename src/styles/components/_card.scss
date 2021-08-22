@@ -92,10 +92,15 @@ div.card-container {
 
       justify-content: center;
       align-items: center;
-      transition: 480ms;
+      transition: 120ms;
       cursor: pointer;
       &:hover {
         background: $gradient-hover;
+        transform: translateY(3px);
+      }
+      &:active {
+        background: $gradient-active;
+        transform: translateY(5px);
       }
       &::before {
         width: 24px;

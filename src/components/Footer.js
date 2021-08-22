@@ -1,3 +1,5 @@
+import { Logo } from '.';
+
 const twitterIcon = (
   <svg width='15' height='12' viewBox='0 0 15 12' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
@@ -13,7 +15,9 @@ const Footer = () => {
     <footer className='footer-wrapper'>
       <div className='content flex'>
         <Col width={2}>
-          <h2>Untitled Inc.</h2>
+          <h2>
+            <Logo />
+          </h2>
           <span>@2021 Untitled Inc</span>
           <span>Made with by @jefe</span>
         </Col>

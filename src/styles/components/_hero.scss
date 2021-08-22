@@ -88,6 +88,15 @@ div.hero-wrapper {
     @media screen and (max-width: $screen-mobile) {
       margin-top: 24px;
     }
+    transition: 120ms;
+    &:hover {
+      transform: translatey(3px);
+      background: $gradient-hover;
+    }
+    &:active {
+      transform: translatey(5px);
+      background: $gradient-active;
+    }
   }
   img {
     width: 422px;

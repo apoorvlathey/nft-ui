@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <div className='w-screen flex flex-col items-center hero-wrapper'>
@@ -5,7 +7,9 @@ const Hero = () => {
       <p>
         A dope showroom for <strong>all</strong> your NFTs
       </p>
-      <a className='bg-gradient rounded-full'>Claim username</a>
+      <Link to='/username' className='bg-gradient rounded-full'>
+        Claim username
+      </Link>
       {/* <img src='/images/hero.png' alt='' /> */}
       {/* <svg preserveAspectRatio='none' viewBox='0 0 2048 2048'>
         <defs>

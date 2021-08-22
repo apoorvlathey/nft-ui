@@ -35,3 +35,7 @@
 - [x] UX bug: It's really hard to scroll through the profile page on mobile because even the slightest touch on a card starts re-ordering. Can we make it so that the user has to hold the card for a second or two before it starts reordering?
 - [ ] Copy emojis
 - [ ] Tablt filter UI
+
+# Login
+
+- [ ] Scooter animation

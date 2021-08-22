@@ -26,11 +26,24 @@ header.mobile-header-wrapper {
       height: 48px;
       display: flex;
       align-items: center;
+      transition: 120ms;
       &[href] {
         font-weight: 600;
       }
+      &:hover {
+        transform: translatey(3px);
+      }
+      &:active {
+        transform: translatey(5px);
+      }
       &.primary {
         color: white;
+        &:hover {
+          background: $gradient-hover;
+        }
+        &:hover {
+          background: $gradient-active;
+        }
       }
       &.skip {
         height: 48px;

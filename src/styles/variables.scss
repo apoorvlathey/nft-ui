@@ -13,6 +13,7 @@ $colour-bg: #fbf8f6;
 
 $gradient-primary: linear-gradient(110.77deg, #ffd0bc -142.14%, #963acf 144.12%);
 $gradient-hover: linear-gradient(110.77deg, darken(#ffd0bc, 5%) -142.14%, darken(#963acf, 5%) 144.12%);
+$gradient-active: linear-gradient(110.77deg, darken(#ffd0bc, 10%) -142.14%, darken(#963acf, 10%) 144.12%);
 
 // Screen sizes
 $screen-mobile: 500px;
