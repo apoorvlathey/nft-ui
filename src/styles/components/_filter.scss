@@ -4,18 +4,34 @@ div.filter-wrapper {
   background: #ffffff;
   box-shadow: 0px 13px 24px rgba(88, 81, 103, 0.04);
   border-radius: 16px;
+  position: relative;
+  @media screen and (max-width: $screen-tablet) {
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+  }
   div.title {
     display: flex;
     align-items: center;
     margin-bottom: 32px;
+    @media screen and (max-width: $screen-tablet) {
+      margin-bottom: 0;
+    }
     span {
       padding-left: 12px;
       font-weight: 600;
       font-size: 24px;
       line-height: 36px;
+      @media screen and (max-width: $screen-tablet) {
+        display: none;
+      }
     }
   }
   div.select-wrapper {
+    @media screen and (max-width: $screen-tablet) {
+      position: absolute;
+      display: none;
+    }
     div.option-wrapper {
       display: flex;
       align-items: center;
@@ -38,6 +54,7 @@ div.filter-wrapper {
           background: white;
           display: block;
           content: '';
+          pointer-events: none;
         }
         div.knob {
           background: linear-gradient(110.77deg, #ffd0bc -142.14%, #963acf 144.12%);

@@ -43,6 +43,31 @@ div.hero-wrapper {
 
     color: $colour-gray;
 
+    strong {
+      font-weight: bold;
+      color: $colour-black;
+      position: relative;
+
+      &::after {
+        top: 50%;
+        left: calc(50% + 4px);
+        transform: translate(-50%, -50%);
+        width: 155px;
+        height: 75px;
+        position: absolute;
+        display: block;
+        content: '';
+        background: url('../../images/stroke.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        @media screen and (max-width: $screen-tablet) {
+          width: 77.12px;
+          height: 33.63px;
+        }
+      }
+    }
+
     @media screen and (max-width: $screen-mobile) {
       margin: 0 32px;
       font-size: 20px;
@@ -62,6 +87,15 @@ div.hero-wrapper {
     box-shadow: 0px 14px 32px rgba(150, 58, 207, 0.24);
     @media screen and (max-width: $screen-mobile) {
       margin-top: 24px;
+    }
+    transition: 120ms;
+    &:hover {
+      transform: translatey(3px);
+      background: $gradient-hover;
+    }
+    &:active {
+      transform: translatey(5px);
+      background: $gradient-active;
     }
   }
   img {

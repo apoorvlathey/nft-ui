@@ -56,6 +56,7 @@ const Creation = () => {
   return (
     <>
       <MobileHeader
+        hideLogo
         actions={
           <>
             <a className='skip'>Skip Now</a>
@@ -63,21 +64,10 @@ const Creation = () => {
         }
       />
       <div className='wallet-creation-page'>
-        <div className='col'>
-          <h1>Connect your first wallet</h1>
-          <img src='/images/fisherman.png' alt='Fisherman' />
-        </div>
-        <div className='col selector'>
-          <h2>Choose network</h2>
-          <div className='row'>
-            {networks.map((_network) => (
-              <Option
-                onSelect={_handleNetwork(_network.value)}
-                {..._network}
-                key={_network.value}
-                active={_network.value === network}
-              />
-            ))}
+        <main>
+          <div className='col'>
+            <h1>Connect your first wallet</h1>
+            <img src='/images/fisherman.png' alt='Fisherman' />
           </div>
           {/* {network !== '' ? ( */}
             <>
@@ -125,7 +115,7 @@ const Creation = () => {
               Skip Now
             </a>
           </div>
-        </div>
+        </main>
       </div>
     </>
   );

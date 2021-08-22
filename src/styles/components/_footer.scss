@@ -15,6 +15,7 @@ footer.footer-wrapper {
     background: url('../../images/oval-4.svg');
     z-index: -2;
     background-size: cover;
+    pointer-events: none;
     @media screen and (max-width: $screen-mobile) {
       max-width: 100vw;
       left: -32px;
@@ -56,6 +57,19 @@ footer.footer-wrapper {
         @media screen and (max-width: $screen-mobile) {
           font-size: 14px;
           line-height: 42px;
+        }
+      }
+      div.socials {
+        display: flex;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          background: white;
+          border-radius: 500px;
+          cursor: pointer;
         }
       }
     }

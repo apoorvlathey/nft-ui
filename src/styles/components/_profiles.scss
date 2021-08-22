@@ -64,7 +64,7 @@ div.profiles-wrapper {
       &:hover {
         animation-play-state: paused;
       }
-      div.profile-wrapper {
+      div.profile-segment-wrapper {
         background: linear-gradient(83.59deg, #fcfcfd 36.52%, rgba(252, 252, 253, 0.83) 98.8%);
 
         box-shadow: 0px 40px 64px 0px rgba(15, 15, 15, 0.1);
@@ -77,6 +77,16 @@ div.profiles-wrapper {
         align-items: center;
         grid-template-columns: 48px auto;
         grid-gap: 16px;
+        cursor: pointer;
+        transition: 32ms;
+        &:hover {
+          background: linear-gradient(110.77deg, #ffd0bc -142.14%, #963acf 144.12%);
+          color: white;
+          span.meta {
+            color: white !important;
+            opacity: 0.6;
+          }
+        }
         img {
           width: 48px;
           height: 48px;

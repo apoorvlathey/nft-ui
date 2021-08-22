@@ -1,0 +1,18 @@
+div.home-page-wrapper {
+  position: relative;
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1200px;
+    background: url('../../images/home-backdrop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    z-index: -1;
+    pointer-events: none;
+  }
+}

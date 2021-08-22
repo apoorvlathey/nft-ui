@@ -57,7 +57,7 @@ const home = (
   </svg>
 );
 
-const Mobile = ({ actions, top, className }) => {
+const Mobile = ({ actions, top, className, sticky, hideLogo }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const _handleToggle = () => setIsCollapsed(!isCollapsed);
@@ -75,13 +75,12 @@ const Mobile = ({ actions, top, className }) => {
         style={top ? { paddingTop: 25 + top } : undefined}
         className={classNames(
           className,
-          'mobile-header-wrapper fixed flex justify-between items-center w-screen top-0 ',
-          isScrolled && 'scrolled',
+          'mobile-header-wrapper flex justify-between items-center w-screen top-0 ',
+          sticky ? 'fixed' : 'absolute',
+          sticky && isScrolled && 'scrolled',
         )}
       >
-        <Link to='/'>
-          <Logo />
-        </Link>
+        <Link to='/'>{!hideLogo && <Logo />}</Link>
         <div onClick={_handleToggle} className={classNames('hamburger', isCollapsed && 'collapsed')}>
           <span />
           <span />
