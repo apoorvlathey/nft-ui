@@ -1,0 +1,15 @@
+FROM node:14
+
+WORKDIR /usr/src/app
+
+COPY package.json ./
+COPY yarn.lock ./
+
+RUN yarn
+RUN yarn global add react-scripts && yarn global add serve
+
+COPY . ./
+
+ENV NODE_ENV='test'
+
+CMD ["yarn", "start"]
