@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Cards, Features, Footer, Hero, Logos, MobileHeader, Profile, Start } from '../components';
 import Input from '../components/Input';
 import classNames from 'classnames';
@@ -20,6 +20,11 @@ const Username = () => {
 
     setState(null);
   };
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = '/images/karate.png';
+  }, []);
   const _handleChange = ({ target: { value } }) => setUsername(value);
   return (
     <>
@@ -36,7 +41,10 @@ const Username = () => {
               {/* {state === 'SUCCESS' && <button onClick={_handleCancel}>Cancel</button>} */}
             </div>
           </form>
-          <img src='/images/banner-cook.png' alt='' />
+          <div className={classNames('image-wrapper', state?.toLowerCase())}>
+            <img src={'/images/banner-cook.png'} alt='' />
+            <img src={'/images/karate.png'} alt='' />
+          </div>
         </main>
       </div>
     </>

@@ -1,6 +1,5 @@
 div.cards-wrapper {
   width: calc(100vw - 320px);
-  max-width: 1056px;
   margin: auto;
   margin-bottom: 200px;
   position: relative;
@@ -102,6 +101,8 @@ div.cards-wrapper {
     // padding: 32px;
     border-radius: 20px;
     width: 100%; //calc(100vw - 320px);
+    max-width: 1056px;
+    margin: auto;
     @media screen and (max-width: $screen-tablet) {
       width: 100%;
       padding: 24px;
@@ -122,6 +123,11 @@ div.cards-wrapper {
         box-shadow: 0px 32px 62px rgba(88, 81, 103, 0.12), 0px 13px 24px rgba(88, 81, 103, 0.04);
         padding: 22px;
         max-width: 400px;
+        transition: 320ms;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0px 32px 62px rgba(88, 81, 103, 0.42), 0px 13px 24px rgba(88, 81, 103, 0.04);
+        }
         @media screen and (max-width: $screen-tablet) {
           &:last-child {
             display: none;

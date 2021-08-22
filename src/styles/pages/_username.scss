@@ -22,15 +22,43 @@ div.username-page-wrapper {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr auto;
     }
-    img {
+    div.image-wrapper {
       width: 382px;
       height: 463px;
-      object-fit: contain;
       display: block;
       // position: absolute;
       // left: 914px;
       margin-left: auto;
       z-index: 2;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0;
+        transition-delay: 260ms;
+        &:last-child {
+          opacity: 0;
+        }
+      }
+
+      &.success {
+        animation: slide 640ms ease-in-out forwards;
+        img {
+          &:last-child {
+            opacity: 1;
+          }
+          &:first-child {
+            opacity: 0;
+          }
+        }
+      }
       @media screen and (max-width: $screen-tablet) {
         width: 319px;
         height: 315px;
@@ -97,6 +125,7 @@ div.username-page-wrapper {
       align-items: flex-start;
       position: relative;
       z-index: 3;
+      width: 480px;
       @media screen and (max-width: $screen-mobile) {
         width: calc(100vw - 64px);
         margin: auto;
@@ -157,5 +186,19 @@ div.username-page-wrapper {
         }
       }
     }
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100vw);
+    // background: url('../../../images/karate.png');
+  }
+  100% {
+    // background: url('../../../images/karate.png');
+    transform: translateX(0);
   }
 }
