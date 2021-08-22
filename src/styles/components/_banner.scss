@@ -1,10 +1,4 @@
 div.banner-segment-container {
-  &.active {
-    background: red;
-    div.wrapper {
-      transform: rotate(50deg);
-    }
-  }
   div.wrapper {
     background: #ffffff;
     /* SH */
@@ -16,6 +10,8 @@ div.banner-segment-container {
 
     position: relative;
     z-index: 6;
+
+    transform-origin: 60% 50%;
 
     img {
       height: 240px;
@@ -56,5 +52,13 @@ div.banner-segment-container {
         margin-left: 8px;
       }
     }
+  }
+}
+
+body > .banner-segment-container {
+  cursor: grabbing;
+  div.wrapper {
+    transition: 240ms;
+    transform: rotate(-10deg);
   }
 }

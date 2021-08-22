@@ -6,7 +6,10 @@ const Banner = ({ value: { banner, title, value, price }, active }) => {
     <div className={classNames('banner-segment-container', active && 'active')}>
       <div className='wrapper'>
         <img src={banner} alt={`${title}'s banner`} />
-        <h2>{title}</h2>
+        <h2>
+          {title}
+          {active && 'active'}
+        </h2>
         <div className='body'>
           <div className='price'>{price}</div>
           <span className='value'>{value}</span>

@@ -5,15 +5,20 @@ div.wallet-creation-page {
   justify-content: center;
   background: #f5f3f5;
   main {
-    padding: 0 160px;
-    padding-top: 160px;
+    padding: 120px 0;
     display: flex;
 
     align-items: flex-start;
     justify-content: space-between;
-    width: 100vw;
+    width: calc(100vw - 240px);
     max-width: 1200px;
+    margin: auto;
+    gap: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 48px;
     @media screen and (max-width: $screen-tablet) {
+      display: flex;
       flex-direction: column;
       justify-content: flex-start;
       padding: 200px 72px;
@@ -26,6 +31,7 @@ div.wallet-creation-page {
       }
     }
     @media screen and (max-width: $screen-mobile) {
+      display: flex;
       align-items: flex-start;
       padding: 152px 32px;
     }
@@ -63,6 +69,8 @@ div.wallet-creation-page {
       flex-direction: column;
       justify-content: flex-start;
       width: 491px;
+      height: 512px;
+      flex-shrink: 0;
       @media screen and (max-width: $screen-mobile) {
         width: 100%;
       }

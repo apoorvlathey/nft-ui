@@ -23,18 +23,21 @@ const Username = () => {
   const _handleChange = ({ target: { value } }) => setUsername(value);
   return (
     <>
-      <MobileHeader actions={<></>} />
+      {/* <MobileHeader actions={<></>} /> */}
       <div className={classNames('username-page-wrapper', state === 'SUCCESS' && 'success')}>
-        <form onSubmit={_handleSubmit}>
-          <h1>Grab your magic internet name</h1>
-          <div className='row'>
-            <Input username value={username} onChange={setUsername} state={state} error={error} />
-            <button disabled={state === 'ERROR'} type='submit' className='primary bg-gradient'>
-              {state === 'SUCCESS' ? 'Next' : 'Check'}
-            </button>
-            {/* {state === 'SUCCESS' && <button onClick={_handleCancel}>Cancel</button>} */}
-          </div>
-        </form>
+        <main>
+          <form onSubmit={_handleSubmit}>
+            <h1>Grab your magic internet name</h1>
+            <div className='row'>
+              <Input username value={username} onChange={setUsername} state={state} error={error} />
+              <button disabled={state === 'ERROR'} type='submit' className='primary bg-gradient'>
+                {state === 'SUCCESS' ? 'Next' : 'Check'}
+              </button>
+              {/* {state === 'SUCCESS' && <button onClick={_handleCancel}>Cancel</button>} */}
+            </div>
+          </form>
+          <img src='/images/banner-cook.png' alt='' />
+        </main>
       </div>
     </>
   );

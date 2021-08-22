@@ -50,6 +50,7 @@ const Profile = () => {
   return (
     <>
       <MobileHeader
+        hiddenLogo
         top={35}
         actions={<ProfileBanner name='Anders' avatar='/images/avatar.jpg' />}
         className='dashboard'

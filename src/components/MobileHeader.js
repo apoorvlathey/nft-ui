@@ -57,7 +57,7 @@ const home = (
   </svg>
 );
 
-const Mobile = ({ actions, top, className, sticky }) => {
+const Mobile = ({ actions, top, className, sticky, hideLogo }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const _handleToggle = () => setIsCollapsed(!isCollapsed);
@@ -80,9 +80,7 @@ const Mobile = ({ actions, top, className, sticky }) => {
           sticky && isScrolled && 'scrolled',
         )}
       >
-        <Link to='/'>
-          <Logo />
-        </Link>
+        <Link to='/'>{!hideLogo && <Logo />}</Link>
         <div onClick={_handleToggle} className={classNames('hamburger', isCollapsed && 'collapsed')}>
           <span />
           <span />

@@ -49,6 +49,16 @@ div.profile-wrapper {
       text-transform: uppercase;
 
       color: #ffffff;
+      cursor: pointer;
+      transition: 120ms;
+      &:hover {
+        transform: translateY(3px);
+        background: $gradient-hover;
+      }
+      &:active {
+        transform: translateY(5px);
+        background: $gradient-active;
+      }
     }
   }
   article {

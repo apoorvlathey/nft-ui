@@ -16,6 +16,7 @@ const Creation = () => {
   return (
     <>
       <MobileHeader
+        hideLogo
         actions={
           <>
             <a className='skip'>Skip Now</a>
